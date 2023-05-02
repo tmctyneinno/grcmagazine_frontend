@@ -31,6 +31,7 @@ export default function CreateStories() {
   const [findno, Setfindno] = useState({})
   const [isedit, Setisedit] = useState(false)
   const [editid, Seteditid] = useState('')
+  const [imgx, Setimgx] = useState('')
    let {state} = useLocation();
    let enid = state?state.id:""
    const navigate = useNavigate();
@@ -96,6 +97,7 @@ export default function CreateStories() {
           Setfive(res.data.findno.articlebodyfive)
           SetQuotation(res.data.findno.articlecoatbody)
           Setcategories(res.data.findno.categories)
+           Setimgx(res.data.findno.picture)
         let dateup =  new Date(res.data.findno.dataup)
         Setdate(dateup);
         Seteditid(res.data.findno.id)
@@ -234,6 +236,7 @@ const handleback =()=>{
   
 const handleEdit =()=>{
   if(editid){
+  let ansimgx =  Object.keys(picture).length > 0?picture:imgx
     let end = new Date(date)
     var enddd = String(end.getDate()).padStart(2, '0');
     var endmm =  end.getMonth(); 
@@ -249,7 +252,7 @@ const handleEdit =()=>{
     formData.append('articlebodyfive',  five)
     formData.append('articlecoatbody',  Quotation)
     formData.append('dataup',  ansdate)
-    formData.append('picture',  picture)
+    formData.append('picture',  ansimgx)
     formData.append('categories',  categories)  
     apiClient.get('/sanctum/csrf-cookie').then(()=>{
       let urltwo = '/api/editarticle';
