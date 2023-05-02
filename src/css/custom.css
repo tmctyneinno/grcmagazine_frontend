@@ -1,0 +1,33 @@
+
+.btncss{
+    background-color:#FF6600;
+    color:white;
+    transition:all 0.2s;
+}
+
+.btncss:hover{
+    background-color:white;
+    color:#FF6600;
+    border: none;
+}
+
+.over{
+overflow-x: scroll;
+}
+
+input , .bootstrap-select.btn-group button{
+    background-color: #f3f4f6  !important;
+    height: 44px  !important;
+    box-shadow: none  !important; 
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+-webkit-appearance: none;
+margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+-moz-appearance: textfield;
+}
