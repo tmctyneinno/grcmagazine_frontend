@@ -25,13 +25,13 @@ export default function List() {
       const handleRead =(id)=>{
 
         if(Object.keys(local).length === 0){
-            window.location.href = `${url}/subscribe`; 
+            window.location.href = `${url}/user/login`; 
 
           }else{
            // window.location.href = `${url}/single/${code}`;
 
             if(sent === false){
-                window.location.href = `${url}/subscribe`; 
+                window.location.href = `${url}/user/login`; 
 
               }else{
                 window.location.href = `${url}/single/${id}`;
@@ -130,11 +130,11 @@ export default function List() {
 
       const handleRedirect =(code)=>{
         if(Object.keys(local).length === 0){
-            navigate(`/subscribe`)
+            navigate(`/user/login`)
 
           }else{
             if(sent === false){
-                navigate(`/subscribe`)
+                navigate(`/user/login`)
               }else{
                 navigate( `/single/${code}`)
               }         
