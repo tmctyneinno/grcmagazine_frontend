@@ -57,7 +57,7 @@ export default function CreateStories() {
   },[])
 
   const apiClient = axios.create({
-    baseURL: "http://127.0.0.1:8000",
+    baseURL: "http://api.tmcinstitute.com",
     withCredentials: true
   });
   

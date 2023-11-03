@@ -31,7 +31,7 @@ let onlineuser = content.onlineuser
 let Setonlineuser = content.Setonlineuser
 let urlre = window.location.origin;
 const apiClient = axios.create({
-    baseURL: "http://127.0.0.1:8000",
+    baseURL: "http://api.tmcinstitute.com",
     withCredentials: true
   });
  const handleShow = ()=>{
@@ -122,7 +122,7 @@ useEffect(()=>{
     // var pusher = new Pusher('1bb26742949be48f563e', {
     //   cluster: 'eu',
     //   forceTLS: true,
-    //   authEndpoint : 'http://127.0.0.1:8000/broadcasting/auth',
+    //   authEndpoint : 'http://api.tmcinstitute.com/broadcasting/auth',
     //  auth:{
     //      headers:{
     //          Authorization: "Bearer " +userdata.token,
@@ -144,7 +144,7 @@ useEffect(()=>{
             encrypted:true,
             forceTLS: true,
             enabledTransports: ['ws', 'wss'],
-           authEndpoint : 'http://127.0.0.1:8000/broadcasting/auth',
+           authEndpoint : 'http://api.tmcinstitute.com/broadcasting/auth',
          auth:{
              headers:{
                  Authorization: "Bearer " +userdata.token,

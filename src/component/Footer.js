@@ -9,7 +9,7 @@ export default function Footer() {
     const [userdata, Setuserdata] = useState(local?local:{});
     const [mail, Setmail] = useState('')
     const apiClient = axios.create({
-        baseURL: "http://127.0.0.1:8000",
+        baseURL: "http://api.tmcinstitute.com",
         withCredentials: true
       });
 

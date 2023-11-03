@@ -15,7 +15,7 @@ let local = localStorage.getItem('userlogindetails')?JSON.parse(AES.decrypt(loca
 export default function Single() {
     // console.log(local)
     const apiClient = axios.create({
-        baseURL: "http://127.0.0.1:8000",
+        baseURL: "http://api.tmcinstitute.com",
         withCredentials: true
       });
 
@@ -257,7 +257,7 @@ const handledel = (id)=>{
     };
     
      apiClient.get('/sanctum/csrf-cookie').then( ()=> { 
-      let url = 'http://127.0.0.1:8000/api/deletecomment';
+      let url = 'http://api.tmcinstitute.com/api/deletecomment';
         fetch(url, requestOptions)
         .then(response => response.json())
         .then(result =>{
@@ -319,7 +319,7 @@ const handlepin =(id)=>{
       };
 
       apiClient.get('/sanctum/csrf-cookie').then( ()=> { 
-        let url = 'http://127.0.0.1:8000/api/pinncomment';
+        let url = 'http://api.tmcinstitute.com/api/pinncomment';
           fetch(url, requestOptions)
           .then(response => response.json())
           .then(result =>{
@@ -352,7 +352,7 @@ var requestOptions = {
   };
 
   apiClient.get('/sanctum/csrf-cookie').then( ()=> { 
-    let url = 'http://127.0.0.1:8000/api/unpinncomment';
+    let url = 'http://api.tmcinstitute.com/api/unpinncomment';
       fetch(url, requestOptions)
       .then(response => response.json())
       .then(result =>{

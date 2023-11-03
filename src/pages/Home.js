@@ -30,7 +30,7 @@ export default function Home() {
     const [adsnormal, Setadsnormal] = useState([])
     const [isnotnormalads, Setisnotnormalads] = useState([])
     const apiClient = axios.create({
-        baseURL: "http://127.0.0.1:8000",
+        baseURL: "http://api.tmcinstitute.com",
         withCredentials: true
       });
     // subscription, userdata.token
@@ -123,7 +123,7 @@ export default function Home() {
                 encrypted:true,
                 forceTLS: true,
                 enabledTransports: ['ws', 'wss'],
-               authEndpoint : 'http://127.0.0.1:8000/broadcasting/auth',
+               authEndpoint : 'http://api.tmcinstitute.com/broadcasting/auth',
              auth:{
                  headers:{
                      Authorization: "Bearer " +userdata.token,

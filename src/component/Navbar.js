@@ -22,7 +22,7 @@ export default function Navbar() {
     // const navigate = useNavigate();
     let original = window.location.origin;
     const apiClient = axios.create({
-        baseURL: "http://127.0.0.1:8000",
+        baseURL: "http://api.tmcinstitute.com",
         withCredentials: true
       });
 
@@ -38,7 +38,7 @@ export default function Navbar() {
   redirect: 'follow'
   };
   
-  const url = 'http://127.0.0.1:8000/api/logout';
+  const url = 'http://api.tmcinstitute.com/api/logout';
   apiClient.get('/sanctum/csrf-cookie').then( ()=> { 
   fetch(url, requestOptions)
   .then(response => response.json())

@@ -17,7 +17,7 @@ export default function List() {
     const [search, Setserch] = useState('')
     const [sent, Setsent] = useState(false)
     const apiClient = axios.create({
-        baseURL: "http://127.0.0.1:8000",
+        baseURL: "http://api.tmcinstitute.com",
         withCredentials: true
       });
       const navigate = useNavigate();
@@ -39,8 +39,6 @@ export default function List() {
              }
       }
 
-
-
       useEffect(()=>{
         apiClient.get('/sanctum/csrf-cookie').then( ()=> {
             let url = '/api/list/';
@@ -53,8 +51,6 @@ export default function List() {
             })
         })
 
-
-        
         apiClient.get('/sanctum/csrf-cookie').then( ()=> {
             let url = '/api/subscription';
             apiClient.get(url, {

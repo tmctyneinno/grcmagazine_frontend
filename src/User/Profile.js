@@ -29,7 +29,7 @@ export default function Profile() {
    const [profile, Setprofile] = useState({})
    const [subdata, Setsubdata] = useState({})
   const apiClient = axios.create({
-    baseURL: "http://127.0.0.1:8000",
+    baseURL: "http://api.tmcinstitute.com",
     withCredentials: true
   });
   const navigate = useNavigate();
@@ -98,7 +98,7 @@ export default function Profile() {
             redirect: 'follow'
             };
             
-            const url = 'http://127.0.0.1:8000/api/logout';
+            const url = 'http://api.tmcinstitute.com/api/logout';
             apiClient.get('/sanctum/csrf-cookie').then( ()=> { 
             fetch(url, requestOptions)
             .then(response => response.json())
@@ -218,7 +218,7 @@ apiClient.get('/sanctum/csrf-cookie').then( ()=> {
               redirect: 'follow'
               };
               
-              const url = 'http://127.0.0.1:8000/api/logout';
+              const url = 'http://api.tmcinstitute.com/api/logout';
               apiClient.get('/sanctum/csrf-cookie').then( ()=> { 
               fetch(url, requestOptions)
               .then(response => response.json())

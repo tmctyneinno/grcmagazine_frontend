@@ -9,13 +9,13 @@ import { useNavigate } from 'react-router-dom';
 let local = localStorage.getItem('userlogindetails')?JSON.parse(AES.decrypt(localStorage.getItem('userlogindetails'), 'GRCMAZAGINE').toString(enc.Utf8)):{}
 
 export default function Sub() {
-   let original = 'http://127.0.0.1:8000';
+   let original = 'http://api.tmcinstitute.com';
    const [data, Setdata] = useState([]);
    const [userdata, Setuserdata] = useState(local?local:{})
    const [infodata, Setinfodata] = useState(null)
    const [islogin, Setislogin] = useState(false)
    const apiClient = axios.create({
-      baseURL: "http://127.0.0.1:8000",
+      baseURL: "http://api.tmcinstitute.com",
       withCredentials: true
     });
 

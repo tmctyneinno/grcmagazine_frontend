@@ -13,7 +13,7 @@ export default function ViewComment() {
  const [data, Setdata] = useState([]);
  const [last, Setlast] = useState(0)
     const apiClient = axios.create({
-        baseURL: "http://127.0.0.1:8000",
+        baseURL: "http://api.tmcinstitute.com",
         withCredentials: true
       });
       const navigate = useNavigate();
