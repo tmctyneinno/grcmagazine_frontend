@@ -11,7 +11,6 @@
     "crypto-js": "^4.1.1",
     "framer-motion": "^10.5.0",
     "interweave": "^13.0.0",
-    "npm-watch": "^0.11.0",
     "react": "^18.2.0",
     "react-currency-format": "^1.1.0",
     "react-datepicker": "^4.9.0",
@@ -29,22 +28,13 @@
     "start": "react-scripts start --max_old_space_size=8096",
     "build": "react-scripts build --max_old_space_size=8096",
     "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "watch": "npm-watch "
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": [
       "react-app",
       "react-app/jest"
     ]
-  },
-  "watch": {
-    "build": {
-      "patterns": [
-        "src"
-      ],
-      "extensions": "js,jsx"
-    }
   },
   
   "browserslist": {
