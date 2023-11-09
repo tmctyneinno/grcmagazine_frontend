@@ -30,7 +30,7 @@
     "build": "react-scripts build --max_old_space_size=4096",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "watch": "npm-watch --max_old_space_size=4096"
+    "watch": "npm-watch "
   },
   "eslintConfig": {
     "extends": [
