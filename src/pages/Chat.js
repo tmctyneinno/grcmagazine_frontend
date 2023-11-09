@@ -31,7 +31,7 @@ let onlineuser = content.onlineuser
 let Setonlineuser = content.Setonlineuser
 let urlre = window.location.origin;
 const apiClient = axios.create({
-    baseURL: "http://api.tmcinstitute.com",
+    baseURL: "http://api.grcfincrimetoday.org",
     withCredentials: true
   });
  const handleShow = ()=>{
@@ -122,7 +122,7 @@ useEffect(()=>{
     // var pusher = new Pusher('1bb26742949be48f563e', {
     //   cluster: 'eu',
     //   forceTLS: true,
-    //   authEndpoint : 'http://api.tmcinstitute.com/broadcasting/auth',
+    //   authEndpoint : 'http://api.grcfincrimetoday.org/broadcasting/auth',
     //  auth:{
     //      headers:{
     //          Authorization: "Bearer " +userdata.token,
@@ -144,7 +144,7 @@ useEffect(()=>{
             encrypted:true,
             forceTLS: true,
             enabledTransports: ['ws', 'wss'],
-           authEndpoint : 'http://api.tmcinstitute.com/broadcasting/auth',
+           authEndpoint : 'http://api.grcfincrimetoday.org/broadcasting/auth',
          auth:{
              headers:{
                  Authorization: "Bearer " +userdata.token,

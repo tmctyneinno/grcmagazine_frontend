@@ -11,7 +11,7 @@ import { useNavigate } from 'react-router-dom';
 export default function Storieslist() {
   let originurl = window.location.origin;
   const apiClient = axios.create({
-    baseURL: "http://api.tmcinstitute.com",
+    baseURL: "http://api.grcfincrimetoday.org",
     withCredentials: true
   });
   const navigate = useNavigate();
@@ -66,7 +66,7 @@ export default function Storieslist() {
             redirect: 'follow'
             };
             
-            const url = 'http://api.tmcinstitute.com/api/logout';
+            const url = 'http://api.grcfincrimetoday.org/api/logout';
             apiClient.get('/sanctum/csrf-cookie').then( ()=> { 
             fetch(url, requestOptions)
             .then(response => response.json())
@@ -107,7 +107,7 @@ export default function Storieslist() {
   };
   
    apiClient.get('/sanctum/csrf-cookie').then( ()=> { 
-    let url = 'http://api.tmcinstitute.com/api/approved';
+    let url = 'http://api.grcfincrimetoday.org/api/approved';
       fetch(url, requestOptions)
       .then(response => response.json())
       .then(result =>{
@@ -140,7 +140,7 @@ export default function Storieslist() {
         };
         
          apiClient.get('/sanctum/csrf-cookie').then( ()=> { 
-          let url = 'http://api.tmcinstitute.com/api/disapproved';
+          let url = 'http://api.grcfincrimetoday.org/api/disapproved';
             fetch(url, requestOptions)
             .then(response => response.json())
             .then(result =>{
@@ -181,7 +181,7 @@ export default function Storieslist() {
               redirect: 'follow'
               };
               
-              const url = 'http://api.tmcinstitute.com/api/logout';
+              const url = 'http://api.grcfincrimetoday.org/api/logout';
               apiClient.get('/sanctum/csrf-cookie').then( ()=> { 
               fetch(url, requestOptions)
               .then(response => response.json())

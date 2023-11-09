@@ -22,7 +22,7 @@ export default function Navbar() {
     // const navigate = useNavigate();
     let original = window.location.origin;
     const apiClient = axios.create({
-        baseURL: "http://api.tmcinstitute.com",
+        baseURL: "http://api.grcfincrimetoday.org",
         withCredentials: true
       });
 
@@ -38,7 +38,7 @@ export default function Navbar() {
   redirect: 'follow'
   };
   
-  const url = 'http://api.tmcinstitute.com/api/logout';
+  const url = 'http://api.grcfincrimetoday.org/api/logout';
   apiClient.get('/sanctum/csrf-cookie').then( ()=> { 
   fetch(url, requestOptions)
   .then(response => response.json())

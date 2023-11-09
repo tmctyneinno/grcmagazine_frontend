@@ -19,7 +19,7 @@ let originurl = window.location.origin;
 const navigate = useNavigate();
 
 const apiClient = axios.create({
-    baseURL: "http://api.tmcinstitute.com",
+    baseURL: "http://api.grcfincrimetoday.org",
     withCredentials: true
   });
 
@@ -68,7 +68,7 @@ useEffect(()=>{
             redirect: 'follow'
             };
             
-            const url = 'http://api.tmcinstitute.com/api/logout';
+            const url = 'http://api.grcfincrimetoday.org/api/logout';
             apiClient.get('/sanctum/csrf-cookie').then( ()=> { 
             fetch(url, requestOptions)
             .then(response => response.json())
@@ -132,7 +132,7 @@ useEffect(()=>{
           redirect: 'follow'
           };
           
-          const url = 'http://api.tmcinstitute.com/api/logout';
+          const url = 'http://api.grcfincrimetoday.org/api/logout';
           apiClient.get('/sanctum/csrf-cookie').then( ()=> { 
           fetch(url, requestOptions)
           .then(response => response.json())

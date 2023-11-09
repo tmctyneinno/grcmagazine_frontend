@@ -30,7 +30,7 @@ export default function Home() {
     const [adsnormal, Setadsnormal] = useState([])
     const [isnotnormalads, Setisnotnormalads] = useState([])
     const apiClient = axios.create({
-        baseURL: "http://api.tmcinstitute.com",
+        baseURL: "http://api.grcfincrimetoday.org",
         withCredentials: true
       });
     // subscription, userdata.token
@@ -123,7 +123,7 @@ export default function Home() {
                 encrypted:true,
                 forceTLS: true,
                 enabledTransports: ['ws', 'wss'],
-               authEndpoint : 'http://api.tmcinstitute.com/broadcasting/auth',
+               authEndpoint : 'http://api.grcfincrimetoday.org/broadcasting/auth',
              auth:{
                  headers:{
                      Authorization: "Bearer " +userdata.token,
